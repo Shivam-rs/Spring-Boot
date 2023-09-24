@@ -1,10 +1,29 @@
 package com.learningspringbootfw.webcourses.bean;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity//name ="Web Courses")
 public class WebCourse {
+	
+	@Id
+	@GeneratedValue
+	
+	//@Column(name="Book ID")
 	private long id;
+	
+	//@Column(name="BooK Name")
 	private String name;
+	
+	//@Column(name="Book Author")
 	private String author;
 
+	public WebCourse() {
+		
+	}
+	
 	public WebCourse(long id, String name, String author) {
 		super();
 		this.id = id;
